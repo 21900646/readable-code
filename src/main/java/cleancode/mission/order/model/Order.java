@@ -18,19 +18,19 @@ public class Order {
         this.customerInfo =  customerInfo == null ? "" : customerInfo;
     }
 
-    public List<String> getItems() {
-        return items == null ? new ArrayList<>() : items;
+    public boolean hasNoOrderItems() {
+        return this.items.size() == 0;
     }
 
-    public int getTotalPrice() {
-        return totalPrice;
-    }
-
-    public String getCustomerInfo() {
-        return customerInfo;
+    public boolean hasValidTotalPrice() {
+        return this.totalPrice > 0;
     }
 
     public boolean hasCustomerInfo(){
         return this.customerInfo != null && !this.customerInfo.isEmpty();
+    }
+
+    public boolean hasNoCustomerInfo() {
+        return !this.hasCustomerInfo();
     }
 }
