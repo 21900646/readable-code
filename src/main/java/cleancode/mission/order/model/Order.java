@@ -22,8 +22,8 @@ public class Order {
         return this.items.size() == 0;
     }
 
-    public boolean hasValidTotalPrice() {
-        return this.totalPrice > 0;
+    public boolean hasInValidTotalPrice() {
+        return this.totalPrice <= 0;
     }
 
     public boolean hasCustomerInfo(){
