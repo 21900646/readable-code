@@ -18,6 +18,7 @@ public class OrderService {
             log.info("주문 항목이 없습니다.");
             return false;
         }
+
         if (order.getTotalPrice() > 0) {
             if (!order.hasCustomerInfo()) {
                 log.info("사용자 정보가 없습니다.");
@@ -25,6 +26,7 @@ public class OrderService {
             }
             return true;
         }
+
         log.info("올바르지 않은 총 가격입니다.");
         return false;
     }
